@@ -23,9 +23,7 @@ public class Carteira {
     private String descricao;
 
     @OneToMany(
-            cascade = CascadeType.ALL,
-            orphanRemoval = true,
             fetch = FetchType.LAZY
     )
-    List<Pessoa> pessoas = new ArrayList<>();
+    private List<Pessoa> pessoas = new ArrayList<>();
 }
